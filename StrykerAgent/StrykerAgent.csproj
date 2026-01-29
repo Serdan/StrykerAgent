@@ -8,8 +8,8 @@
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>stryker-agent</ToolCommandName>
     <PackageId>stryker-agent</PackageId>
-    <Version>0.1.1</Version>
-    <Authors>Stryker</Authors>
+    <Version>0.1.2</Version>
+    <Authors>Anders Kehlet</Authors>
     <Description>AI-accessible interface for Stryker.NET mutation reports.</Description>
     <PackageOutputPath>$(Home)/nuget</PackageOutputPath>
   </PropertyGroup>
