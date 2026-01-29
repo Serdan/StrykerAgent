@@ -12,6 +12,11 @@ AI-accessible CLI for querying Stryker.NET mutation testing reports.
 dotnet build
 ```
 
+## Install (dotnet tool)
+```bash
+dotnet tool install --global --add-source ./StrykerAgent/bin/Release stryker-agent
+```
+
 ## Usage
 The CLI is exposed as `stryker-agent` when packed as a dotnet tool. For local runs:
 
