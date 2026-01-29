@@ -445,12 +445,13 @@ public static class Program
         {
             var matches = Directory.EnumerateFiles(strykerOutput, "mutation-report.json", SearchOption.AllDirectories)
                 .Where(IsReportInReportsFolder)
-                .OrderBy(path => path, StringComparer.Ordinal)
+                .Select(path => new { Path = path, LastWriteUtc = File.GetLastWriteTimeUtc(path) })
+                .OrderByDescending(entry => entry.LastWriteUtc)
                 .ToList();
 
             if (matches.Count > 0)
             {
-                return matches[0];
+                return matches[0].Path;
             }
         }
 
